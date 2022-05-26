@@ -161,5 +161,5 @@ const showAll = function () {
 
 const dropItems = document.getElementById("drop-items");
 new Sortable(dropItems, {
-  animation: 150,
+  animation: 350,
 });
