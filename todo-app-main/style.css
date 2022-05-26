@@ -262,3 +262,11 @@ p.options-text.completed {
 .options-cross {
   cursor: pointer;
 }
+
+.drag-drop {
+  color: var(--color-finished);
+  font-size: 0.9rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  text-align: center;
+}
