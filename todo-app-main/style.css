@@ -221,7 +221,7 @@ p.options-text.completed {
   font-weight: 400;
   display: flex;
   align-items: flex-end;
-  padding: 1.5rem 2rem;
+  padding: 2rem 2rem;
   justify-content: space-between;
   background-color: var(--color-bg-list);
 }
@@ -261,6 +261,8 @@ p.options-text.completed {
 
 .options-cross {
   cursor: pointer;
+  height: 2rem;
+  width: 2rem;
 }
 
 .drag-drop {
