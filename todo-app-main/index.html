@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="app.js" defer></script>
+
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- <img
+        class="bg-image"
+        src="./images/bg-mobile-dark.jpg"
+        alt="dark-theme-background-image"
+      /> -->
+      <!-- <img
+        class="bg-image"
+        srcset="
+          ./images/bg-mobile-dark.jpg   375w,
+          ./images/bg-desktop-dark.jpg 1440w
+        "
+        sizes="(max-width:375px) 375px, 1440px"
+        alt="background-image"
+      /> -->
+      <picture class="index">
+        <source
+          class="theme-bg-mobile"
+          media="(max-width: 375px)"
+          srcset="./images/bg-mobile-dark.jpg"
+        />
+        <source
+          class="theme-bg-desktop"
+          media="(min-width: 1440px)"
+          srcset="./images/bg-desktop-dark.jpg"
+        />
+        <img
+          src="./images/bg-desktop-dark.jpg"
+          class="bg-image"
+          alt="bg image"
+        />
+      </picture>
+    </header>
+    <main>
+      <section>
+        <div class="app-header">
+          <h1 class="app-name">TODO</h1>
+          <div class="theme light"></div>
+        </div>
+      </section>
+      <section>
+        <form class="form">
+          <div class="form-checkbox"></div>
+          <label for="todo"></label>
+          <input
+            class="form-todo first"
+            type="text"
+            name="todo"
+            placeholder="Create a new todo..."
+            autocomplete="off"
+          />
+        </form>
+      </section>
+      <section class="options-section">
+        <div class="options" id="drop-items"></div>
+        <div class="options-info">
+          <div class="options-number">0 items left</div>
+          <div class="options-desktop options-main">
+            <button
+              class="options-btn first-btn"
+              data-filter="all"
+              onclick="filterItems(event)"
+              id="active"
+            >
+              All
+            </button>
+
+            <button
+              class="options-btn"
+              data-filter="active"
+              onclick="filterItems(event)"
+            >
+              Active
+            </button>
+
+            <button
+              class="options-btn"
+              data-filter="completed-task"
+              onclick="filterItems(event)"
+            >
+              Completed
+            </button>
+          </div>
+          <button class="options-btn options-btn-color" id="delete-all">
+            Clear Completed
+          </button>
+        </div>
+      </section>
+      <section>
+        <div class="options-mobile options-main">
+          <button
+            class="options-btn first-btn"
+            data-filter="all"
+            onclick="filterItems(event)"
+            id="active-mobile"
+          >
+            All
+          </button>
+
+          <button
+            class="options-btn"
+            data-filter="active"
+            onclick="filterItems(event)"
+          >
+            Active
+          </button>
+
+          <button
+            class="options-btn"
+            data-filter="completed-task"
+            onclick="filterItems(event)"
+          >
+            Completed
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  </body>
+</html>
