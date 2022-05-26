@@ -162,4 +162,7 @@ const showAll = function () {
 const dropItems = document.getElementById("drop-items");
 new Sortable(dropItems, {
   animation: 850,
+  delay: 50,
+  touchStartThreshold: 5,
+  fallbackTolerance: 5,
 });
